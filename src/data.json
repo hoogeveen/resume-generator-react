@@ -1,0 +1,124 @@
+{
+    "personal": {
+        "firstName": "Merijn",
+        "lastName": "Hoogeveen",
+        "birthday": "02-10-1989",
+        "jobtitle": "Digital Developer",
+        "phoneNumber": "+316123456789",
+        "email": "mail@merijn.pt",
+        "currentSituation": {
+            "title": "Digital Developer",
+            "company": {
+                "name": "Strangelove",
+                "website": "https://strangelove.nl"
+            }
+        },
+        "location": {
+            "city": "Amsterdam",
+            "country": "The Netherlands"
+        },
+        "picture": "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+    },
+    "profile": {
+        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus. Sed condimentum, magna ut pulvinar sagittis, mi felis dignissim dolor, sed sollicitudin libero sapien eu urna. Curabitur quis mauris erat. Proin quis nisi nunc."
+    },
+    "workExperience": [
+        {
+            "title": "Digital Developer",
+            "company": {
+                "name": "Strangelove",
+                "website": "https://strangelove.nl"
+            },
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus.",
+            "date": {
+                "start": "11/2014",
+                "end": "present"
+            }
+        },
+        {
+            "title": "Webdeveloper",
+            "company": {
+                "name": "Impacto"
+            },
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus.",
+            "date": {
+                "start": "03/2012",
+                "end": "11/2014"
+            }
+        }
+    ],
+    "languages": [
+        {
+            "name": "Dutch",
+            "value": "Native speaker"
+        },
+        {
+            "name": "Portuguese",
+            "value": "Native speaker"
+        },
+        {
+            "name": "English",
+            "value": "Fluent in writing and speaking"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Javascript",
+            "color": "#F0DB4F"
+        },
+        {
+            "name": "Typescript",
+            "color": "#007acc"
+        },
+        {
+            "name": "Node.JS",
+            "color": "#68A063"
+        },
+        {
+            "name": "React",
+            "color": "#61DBFB"
+        },
+        {
+            "name": "Angular",
+            "color": "#B52E31"
+        },
+        {
+            "name": "Docker",
+            "color": "#0db7ed"
+        },
+        {
+            "name": "Kubernetes",
+            "color": "#3371e3"
+        }
+    ],
+    "education": [
+        {
+            "title": "Digital Product Development",
+            "institution": {
+                "name": "University of Aveiro Norte",
+                "location": {
+                    "city": "Oxford",
+                    "country": "United Kingdom"
+                }
+            },
+            "date": {
+                "start": "03/2009",
+                "end": "03/2010"
+            }
+        },
+        {
+            "title": "Curso Profissional de Multimedia",
+            "institution": {
+                "name": "Escola Profissional Mariana Seixas",
+                "location": {
+                    "city": "Oxford",
+                    "country": "United Kingdom"
+                }
+            },
+            "date": {
+                "start": "03/2005",
+                "end": "06/2008"
+            }
+        }
+    ]
+}
