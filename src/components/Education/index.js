@@ -28,7 +28,7 @@ export default ({ data }) => {
         return (
             <Spacing small>
                 <ExperienceTitle>{education.title} </ExperienceTitle>
-                <ExperienceDate>{education.date.start} {education.date.end}</ExperienceDate>
+                <ExperienceDate>{education.date.start} - {education.date.end}</ExperienceDate>
                 <ExperienceParagraph>{education.institution.name}</ExperienceParagraph>
             </Spacing>
         )

@@ -120,13 +120,13 @@
             "institution": {
                 "name": "University of Aveiro Norte",
                 "location": {
-                    "city": "Oxford",
-                    "country": "United Kingdom"
+                    "city": "Aveiro",
+                    "country": "Portugal"
                 }
             },
             "date": {
-                "start": "03/2009",
-                "end": "03/2010"
+                "start": "March 2009",
+                "end": "March 2010"
             }
         },
         {
@@ -134,21 +134,21 @@
             "institution": {
                 "name": "Escola Profissional Mariana Seixas",
                 "location": {
-                    "city": "Oxford",
-                    "country": "United Kingdom"
+                    "city": "Viseu",
+                    "country": "Portugal"
                 }
             },
             "date": {
-                "start": "03/2005",
-                "end": "06/2008"
+                "start": "September 2005",
+                "end": "July 2008"
             }
         }
     ],
     "projects": [
         {
-            "name": "React CV Generator",
+            "name": "Resume Generator",
             "tagline": "Create your own CV in a couple of seconds by filling out a JSON file",
-            "url": "https://github.com/hoogeveen/resume-generator",
+            "url": "https://github.com/hoogeveen/resume-generator-react",
             "tags": [
                 {
                     "name": "Javascript",
