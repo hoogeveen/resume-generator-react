@@ -43,7 +43,9 @@ const CircularPicture = styled.img`
 `
 
 const Information = styled.div`
-    flex: 70%;
+    @media ${device.tablet} {
+        flex: 70%;
+    }
 `
 
 const ContactDetails = styled.ul`
