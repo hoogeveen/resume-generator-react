@@ -63,7 +63,11 @@ const Sidebar = styled.div`
 
 const Footer = styled.div`
     border-top: 1px solid #EBEBEB;
-    padding: 2em 4em 2em;
+    padding: 2em;
+    @media ${device.laptop} {
+        padding: 4em 3em 0em;
+        flex: 30%;
+    }
     & p {
         margin: 0;
     }
