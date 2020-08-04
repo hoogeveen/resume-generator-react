@@ -1,9 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import Spacing from '../../fragments/Spacing'
+import { device } from '../../styles'
 
 const Profile = styled.div`
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    @media ${device.tablet} {
+        flex-direction: row;
+        text-align: left;
+    }
 `
 
 const Name = styled.h1`
@@ -22,7 +30,11 @@ const Location = styled.p`
 const Picture = styled.div`
     width: 100px;
     height: 100px;
-    margin-right: 50px;
+    margin-bottom: 30px;
+    @media ${device.tablet} {
+        margin-bottom: initial;
+        margin-right: 50px;
+    }
 `
 
 const CircularPicture = styled.img`
