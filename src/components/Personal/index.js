@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Spacing from '../../fragments/Spacing'
 
 const Profile = styled.div`
-    max-width: 400px;
     display: flex;
 `
 

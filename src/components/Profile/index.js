@@ -11,7 +11,7 @@ export default ({ data }) => {
     return (
         <Spacing>
             <SectionHeader>Profile</SectionHeader>
-            <Line><p>{bio}</p></Line>
+            <Line><div dangerouslySetInnerHTML={{ __html: bio }} /></Line>
         </Spacing>
     )
 }

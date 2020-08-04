@@ -3,11 +3,10 @@
         "firstName": "Merijn",
         "lastName": "Hoogeveen",
         "birthday": "02-10-1989",
-        "jobtitle": "Digital Developer",
-        "phoneNumber": "+316123456789",
+        "phoneNumber": "+310624809278",
         "email": "mail@merijn.pt",
         "currentSituation": {
-            "title": "Digital Developer",
+            "title": "Development Team Lead",
             "company": {
                 "name": "Strangelove",
                 "website": "https://strangelove.nl"
@@ -17,33 +16,57 @@
             "city": "Amsterdam",
             "country": "The Netherlands"
         },
-        "picture": "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"
+        "picture": "/photo@2x.png"
     },
     "profile": {
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus. Sed condimentum, magna ut pulvinar sagittis, mi felis dignissim dolor, sed sollicitudin libero sapien eu urna. Curabitur quis mauris erat. Proin quis nisi nunc."
+        "bio": "<p>The first time my hands touched a keyboard was at the age of two. <br /> Today I am a Full Stack Developer.</p>"
     },
     "workExperience": [
+        {
+            "title": "Development Team Lead",
+            "company": {
+                "name": "Strangelove",
+                "website": "https://strangelove.nl"
+            },
+            "description": "Responsible for the architecture in our products and helping the other team members solve their problems.",
+            "date": {
+                "start": "November 2018",
+                "end": "present"
+            }
+        },
+        {
+            "title": "Full Stack Developer",
+            "company": {
+                "name": "Strangelove",
+                "website": "https://strangelove.nl"
+            },
+            "description": "Responsible for building websites for our clients, ranging from integrating the CMS to building complex frontend solutions.",
+            "date": {
+                "start": "November 2016",
+                "end": "November 2018"
+            }
+        },
         {
             "title": "Digital Developer",
             "company": {
                 "name": "Strangelove",
                 "website": "https://strangelove.nl"
             },
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus.",
+            "description": "Responsible for working on our in-house Content Management System. Integrating the CMS in the websites for our clients.",
             "date": {
-                "start": "11/2014",
-                "end": "present"
+                "start": "November 2014",
+                "end": "November 2016"
             }
         },
         {
             "title": "Webdeveloper",
             "company": {
-                "name": "Impacto"
+                "name": "Impacto (Portugal)"
             },
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac nisi sollicitudin ante vehicula tincidunt eget non tellus.",
+            "description": "Responsible for designing and developing websites",
             "date": {
-                "start": "03/2012",
-                "end": "11/2014"
+                "start": "March 2012",
+                "end": "October 2014"
             }
         }
     ],
@@ -87,8 +110,8 @@
             "color": "#0db7ed"
         },
         {
-            "name": "Kubernetes",
-            "color": "#3371e3"
+            "name": "GraphQL",
+            "color": "#e535ab"
         }
     ],
     "education": [
@@ -119,6 +142,30 @@
                 "start": "03/2005",
                 "end": "06/2008"
             }
+        }
+    ],
+    "projects": [
+        {
+            "name": "React CV Generator",
+            "tagline": "Create your own CV in a couple of seconds by filling out a JSON file",
+            "url": "https://github.com/hoogeveen/resume-generator",
+            "tags": [
+                {
+                    "name": "Javascript",
+                    "color": "#F0DB4F"
+                }
+            ]
+        },
+        {
+            "name": "Apply",
+            "tagline": "World of Warcraft interactive apply form",
+            "url": "https://github.com/hoogeveen/apply",
+            "tags": [
+                {
+                    "name": "Javascript",
+                    "color": "#F0DB4F"
+                }
+            ]
         }
     ]
 }

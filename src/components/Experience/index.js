@@ -32,7 +32,7 @@ export default ({ data }) => {
         return (
             <Spacing small>
                 <ExperienceTitle>{experience.title} {experience.company && <> @ {company} </>} </ExperienceTitle>
-                <ExperienceDate>{experience.date.start} {experience.date.end}</ExperienceDate>
+                <ExperienceDate>{experience.date.start} - {experience.date.end}</ExperienceDate>
                 <ExperienceParagraph>{experience.description}</ExperienceParagraph>
             </Spacing>
         )
