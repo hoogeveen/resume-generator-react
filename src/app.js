@@ -96,7 +96,7 @@ export default () => {
                     </Sidebar>
                 </Info>
                 <Footer>
-                    <p>{data.personal.firstName} {data.personal.lastName} ©{new Date().getFullYear()} - All rights reserved | Visit the project on <a href={'https://github.com/hoogeveen/resume-generator-react'} target={'_blank'}>Github</a></p>
+                    <p>{data.personal.firstName} {data.personal.lastName} | Visit the project on <a href={'https://github.com/hoogeveen/resume-generator-react'} target={'_blank'}>Github</a></p>
                 </Footer>
             </Page>
         </>
