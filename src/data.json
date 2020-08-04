@@ -19,7 +19,7 @@
         "picture": "/photo@2x.png"
     },
     "profile": {
-        "bio": "<p>The first time my hands touched a keyboard was at the age of two. <br /> Today I am a Full Stack Developer.</p>"
+        "bio": "<p>The first time my hands touched a keyboard was at the age of two. \n Today I am a Full Stack Developer.</p>"
     },
     "workExperience": [
         {

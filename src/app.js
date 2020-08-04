@@ -38,7 +38,9 @@ const GlobalStyle = createGlobalStyle`
   p, li {
     color: #858585;
     line-height: 2;
-    white-space: pre-line;
+    @media ${device.laptop} {
+        white-space: pre-line;
+    }
   }
 `
 
