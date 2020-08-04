@@ -9,7 +9,7 @@ Create your own CV in a couple of seconds by filling out a JSON file.
  
 The design of this CV template was made by Franklin Schamhart
 
-##Copyright
+## Copyright
 
 Copyright (c) 2020 Merijn Hoogeveen
 
