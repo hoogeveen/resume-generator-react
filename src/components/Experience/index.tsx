@@ -4,23 +4,9 @@ import Spacing from '../../fragments/Spacing'
 import SectionHeader from '../../fragments/SectionHeader'
 import Line from '../../fragments/Line'
 import { workExperience } from '../../types'
-
-const ExperienceTitle = styled.h3`
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
-    font-weight: 600;
-`
-
-const ExperienceDate = styled.p`
-    margin: 0;
-    color: #329CB9
-`
-
-const ExperienceParagraph = styled.p`
-    margin: 0;
-`
-
+import Timespan from '../../fragments/Timespan'
+import Paragraph from '../../fragments/Paragraph'
+import Title from '../../fragments/Title'
 
 export default ({ data }: { data: workExperience[] }) => {
 
@@ -32,9 +18,9 @@ export default ({ data }: { data: workExperience[] }) => {
 
         return (
             <Spacing small>
-                <ExperienceTitle>{experience.jobTitle} {experience.company && <> @ {company} </>} </ExperienceTitle>
-                { experience.date && <ExperienceDate>{experience.date.start.toDateString()} - {experience.date.end.toDateString()}</ExperienceDate>}
-                <ExperienceParagraph>{experience.jobDescription}</ExperienceParagraph>
+                <Title>{experience.jobTitle} {experience.company && <> @ {company} </>}</Title>
+                { experience.date && <Timespan timespan={experience.date} />}
+                <Paragraph>{experience.jobDescription}</Paragraph>
             </Spacing>
         )
     })

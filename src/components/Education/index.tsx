@@ -1,26 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
 import Spacing from '../../fragments/Spacing'
 import SectionHeader from '../../fragments/SectionHeader'
 import Line from '../../fragments/Line'
 import { Education } from '../../types'
-
-const ExperienceTitle = styled.h3`
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
-    font-weight: 600;
-`
-
-const ExperienceDate = styled.p`
-    margin: 0;
-    color: #329CB9
-`
-
-const ExperienceParagraph = styled.p`
-    margin: 0;
-`
-
+import Timespan from '../../fragments/Timespan'
+import Paragraph from '../../fragments/Paragraph'
+import Title from '../../fragments/Title'
 
 export default ({ data }: { data: Education[] }) => {
 
@@ -28,9 +13,9 @@ export default ({ data }: { data: Education[] }) => {
 
         return (
             <Spacing small>
-                <ExperienceTitle>{education.name} </ExperienceTitle>
-                { education.date && <ExperienceDate>{education.date.start.toDateString()} - {education.date.end.toDateString()}</ExperienceDate>}
-                <ExperienceParagraph>{education.institution.name}</ExperienceParagraph>
+                <Title>{education.name}</Title>
+                <Timespan timespan={education.date} />
+                <Paragraph>{education.institution.name}</Paragraph>
             </Spacing>
         )
     })
