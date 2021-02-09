@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import SectionHeader from '../../fragments/SectionHeader'
 import Spacing from '../../fragments/Spacing'
 import Line from '../../fragments/Line'
+import { Profile } from '../../types'
 
-export default ({ data }) => {
+export default ({ data }: { data: Profile }) => {
 
     const { bio } = data
 

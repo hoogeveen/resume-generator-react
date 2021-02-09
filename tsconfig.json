@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		"esModuleInterop": true,
+		"noImplicitAny": false,
+		"target": "es6",
+		"types": ["react", "jest"],
+		"lib": ["es2019", "dom"],
+		"jsx": "react",
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"strict": true,
+		"downlevelIteration": true
+	},
+}

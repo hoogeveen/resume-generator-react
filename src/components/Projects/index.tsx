@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Spacing from '../../fragments/Spacing'
 import SectionHeader from '../../fragments/SectionHeader'
+import { Project } from '../../types'
 
 const Link = styled.a`
     display: block;
@@ -41,7 +42,7 @@ const Tag = styled.div`
 `
 
 
-export default ({ data }) => {
+export default ({ data }: { data: Project[]}) => {
 
     const renderProjects = data.map(project => {
 
@@ -55,7 +56,7 @@ export default ({ data }) => {
             <Spacing small>
                 <Container>
                     <Link target={"_blank"} href={project.url}>{project.name}</Link>
-                    <Tagline>{project.tagline}</Tagline>
+                    <Tagline>{project.description}</Tagline>
                     {renderTags}
                 </Container>
             </Spacing>

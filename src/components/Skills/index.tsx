@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionHeader from '../../fragments/SectionHeader'
 import Spacing from '../../fragments/Spacing'
+import { Tag } from '../../types'
 
 const Skills = styled.ul`
     list-style: none;
@@ -19,7 +20,7 @@ const Skill = styled.li`
 `
 
 
-export default ({ data }) => {
+export default ({ data }: { data: Tag[]}) => {
 
     const renderSkills = data.map(skill => {
         return (

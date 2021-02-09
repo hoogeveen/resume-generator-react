@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Spacing from '../../fragments/Spacing'
 import { device } from '../../styles'
+import { Personal } from '../../types'
 
 const Profile = styled.div`
     display: flex;
@@ -60,7 +61,7 @@ const ContactDetails = styled.ul`
     }
 `
 
-export default ({ data }) => {
+export default ({ data }: { data: Personal }) => {
     const {
         firstName,
         lastName,
@@ -83,7 +84,7 @@ export default ({ data }) => {
                 </Picture>
                 <Information>
                     <Name>{`${firstName} ${lastName}`}</Name>
-                    <Jobtitle>{currentSituation.title}{currentSituation.company && <> @ {company} </>}</Jobtitle>
+                    <Jobtitle>{currentSituation.jobTitle}{currentSituation.company && <> @ {company} </>}</Jobtitle>
                     <Location>{`${location.city}, ${location.country}`}</Location>
                     <ContactDetails>
 

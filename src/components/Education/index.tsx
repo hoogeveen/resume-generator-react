@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Spacing from '../../fragments/Spacing'
 import SectionHeader from '../../fragments/SectionHeader'
 import Line from '../../fragments/Line'
+import { Education } from '../../types'
 
 const ExperienceTitle = styled.h3`
     margin: 0;
@@ -21,14 +22,14 @@ const ExperienceParagraph = styled.p`
 `
 
 
-export default ({ data }) => {
+export default ({ data }: { data: Education[] }) => {
 
     const renderEducation = data.map(education => {
 
         return (
             <Spacing small>
-                <ExperienceTitle>{education.title} </ExperienceTitle>
-                <ExperienceDate>{education.date.start} - {education.date.end}</ExperienceDate>
+                <ExperienceTitle>{education.name} </ExperienceTitle>
+                { education.date && <ExperienceDate>{education.date.start.toDateString()} - {education.date.end.toDateString()}</ExperienceDate>}
                 <ExperienceParagraph>{education.institution.name}</ExperienceParagraph>
             </Spacing>
         )

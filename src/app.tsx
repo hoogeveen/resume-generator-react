@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import data from './data.json'
+import data from './data'
 import Page from './components/Page'
 import Personal from './components/Personal'
 import Profile from './components/Profile'

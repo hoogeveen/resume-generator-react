@@ -2,10 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionHeader from '../../fragments/SectionHeader'
 
-const Link = styled.a`
-
-`
-
 const ContactDetails = styled.ul`
     list-style: none;
     padding: 0;

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Spacing from '../../fragments/Spacing'
 import SectionHeader from '../../fragments/SectionHeader'
 import Line from '../../fragments/Line'
+import { workExperience } from '../../types'
 
 const ExperienceTitle = styled.h3`
     margin: 0;
@@ -21,7 +22,7 @@ const ExperienceParagraph = styled.p`
 `
 
 
-export default ({ data }) => {
+export default ({ data }: { data: workExperience[] }) => {
 
     const renderExperience = data.map(experience => {
 
@@ -31,9 +32,9 @@ export default ({ data }) => {
 
         return (
             <Spacing small>
-                <ExperienceTitle>{experience.title} {experience.company && <> @ {company} </>} </ExperienceTitle>
-                <ExperienceDate>{experience.date.start} - {experience.date.end}</ExperienceDate>
-                <ExperienceParagraph>{experience.description}</ExperienceParagraph>
+                <ExperienceTitle>{experience.jobTitle} {experience.company && <> @ {company} </>} </ExperienceTitle>
+                { experience.date && <ExperienceDate>{experience.date.start.toDateString()} - {experience.date.end.toDateString()}</ExperienceDate>}
+                <ExperienceParagraph>{experience.jobDescription}</ExperienceParagraph>
             </Spacing>
         )
     })

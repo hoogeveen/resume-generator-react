@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionHeader from '../../fragments/SectionHeader'
 import Spacing from '../../fragments/Spacing'
+import { Language } from '../../types'
 
-const Language = styled.dt`
+const Lang = styled.dt`
     font-weight: 600;
 `
 
@@ -14,13 +15,13 @@ const Level = styled.dd`
 `
 
 
-export default ({ data }) => {
+export default ({ data }: { data: Language[]}) => {
 
     const renderLanguages = data.map(language => {
         return (
             <Spacing small>
                 <dl>
-                    <Language>{language.name}</Language>
+                    <Lang>{language.name}</Lang>
                     <Level>{language.value}</Level>
                 </dl>
             </Spacing>
