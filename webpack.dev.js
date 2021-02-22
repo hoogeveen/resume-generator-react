@@ -20,7 +20,7 @@ const config = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" }
+      { test: /\.tsx?$/, loader: "ts-loader" },
     ]
   },
   plugins: [htmlPlugin]

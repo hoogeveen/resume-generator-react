@@ -7,6 +7,7 @@ const data: ProfileData  = {
         birthday: '02-10-1989',
         phoneNumber: '+31624809278',
         email: 'mail@merijn.pt',
+        picture: 'https://avatars.githubusercontent.com/u/4540853?s=460&u=6e5c72fb9467257e2ad489902ee87ed547314e48&v=4',
         currentSituation: {
             jobTitle: 'Development Team Lead',
             jobDescription: 'Responsible for building websites for our clients, ranging from integrating the CMS to building complex frontend solutions.',
@@ -22,8 +23,7 @@ const data: ProfileData  = {
         location: {
             city: 'Amsterdam',
             country: 'The Netherlands'
-        },
-        picture: '/photo@2x.png'
+        }
     },
     profile: {
         bio: '<p>The first time my hands touched a keyboard was at the age of two. \n Today I am a Full Stack Developer.</p>'

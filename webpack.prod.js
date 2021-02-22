@@ -22,7 +22,7 @@ const config = {
   module: {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-      { test: /\.tsx?$/, loader: "ts-loader", options: { configFile: 'tsconfig.prod.json'} }
+      { test: /\.tsx?$/, loader: "ts-loader", options: { configFile: 'tsconfig.prod.json'} },
     ]
   },
   plugins: [htmlPlugin]
