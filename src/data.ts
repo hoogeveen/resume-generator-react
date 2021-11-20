@@ -51,6 +51,10 @@ const data: ProfileData  = {
                     city: 'Amsterdam',
                     country: 'The Netherlands'
                 }
+            },
+            date: {
+                start: new Date('2018-11-01'),
+                end: new Date('2020-11-31')
             }
         },
         {
@@ -104,15 +108,15 @@ const data: ProfileData  = {
     languages: [
         {
             name: 'Dutch',
-            value: 'Native speaker'
+            value: 'Native or bilingual proficiency'
         },
         {
             name: 'Portuguese',
-            value: 'Native speaker'
+            value: 'Native or bilingual proficiency'
         },
         {
             name: 'English',
-            value: 'Fluent in writing and speaking'
+            value: 'Professional working proficiency'
         }
     ],
     skills: [

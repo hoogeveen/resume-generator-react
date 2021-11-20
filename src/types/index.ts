@@ -31,7 +31,7 @@ export type workExperience = {
     date?: Timespan
 }
 
-export type Proficiency = 'Native speaker' | 'Fluent in writing and speaking'
+export type Proficiency = 'Native speaker' | 'Fluent in writing and speaking' | 'Native or bilingual proficiency' | 'Professional working proficiency'
 
 export type Language = {
     name: string
