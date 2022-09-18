@@ -1,110 +1,87 @@
-import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import React from "react";
+import styled, { createGlobalStyle } from "styled-components";
+import { F3Icon, GT3Icon, LOAIcon } from "./Components/base64";
+import LoaSquare from "./Components/LoaSquare";
+import Square from "./Components/Square";
 
-import data from './data'
-import Page from './components/Page'
-import Personal from './components/Personal'
-import Profile from './components/Profile'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import Languages from './components/Languages'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import { device } from './styles'
+const GlobalStyling = createGlobalStyle`
+    html {
+        margin: 0; 
+        padding: 0;
+    }    
 
-const GlobalStyle = createGlobalStyle`
-  body {
+    body {
+        margin: 5px; 
+        padding: 0;
+        background-color: black;
 
-    padding: 0;
-    margin: 0;
-    background-color: #FFF;
-    @media ${device.laptop} {
-        background-color: #329CB9;
-        padding: 2em;
+        color: white;
+        font-family: 'Roboto', sans-serif;
     }
+`;
 
-    font-family: "Source Sans Pro", sans-serif;
-    color: #303030;
-  }
+const Grid = styled.div`
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: repeat(12, 80px);
+  grid-template-rows: repeat(6, 80px);
+`;
 
-  a {
-    text-decoration: none;
-    color: #329CB9;
-    &:hover {
-        text-decoration: underline;
-    }
-  }
-
-  p, li {
-    color: #858585;
-    line-height: 2;
-    @media ${device.laptop} {
-        white-space: pre-line;
-    }
-  }
-`
-
-const Main = styled.div`
-    padding: 4em 2em 0em;
-    @media ${device.laptop} {
-        padding: 4em 4em 0em;
-        flex: 70%;
-    }
-
-`
-
-const Sidebar = styled.div`
-    padding: 0em 2em 0em;
-    @media ${device.laptop} {
-        padding: 4em 3em 0em;
-        flex: 30%;
-    }
-
-    border-left: 1px solid #EBEBEB;
-`
-
-const Footer = styled.div`
-    border-top: 1px solid #EBEBEB;
-    padding: 2em;
-    @media ${device.laptop} {
-        padding: 2em 4em 2em;
-    }
-    & p {
-        margin: 0;
-    }
-`
-
-const Info = styled.div`
-    display: flex;
-    flex-direction: column;
-    @media ${device.laptop} {
-        flex-direction: row;
-    }
-`
-
-export default () => {
-    return (
-        <>
-            <GlobalStyle />
-            <Page>
-                <Info>
-                    <Main>
-                        <Personal data={data.personal} />
-                        <Profile data={data.profile} />
-                        <Experience data={data.workExperience} />
-                        <Education data={data.education} />
-                    </Main>
-                    <Sidebar>
-                        <Projects data={data.projects} />
-                        <Skills data={data.skills} />
-                        <Languages data={data.languages} />
-                    </Sidebar>
-                </Info>
-                <Footer>
-                    <p>{data.personal.firstName} {data.personal.lastName} | Visit the project on <a href={'https://github.com/hoogeveen/resume-generator-react'} target={'_blank'}>Github</a></p>
-                </Footer>
-            </Page>
-        </>
-    )
-
+function App() {
+  return (
+    <>
+      <GlobalStyling />
+      <Grid>
+        <Square
+          column={1}
+          row={1}
+          size={4}
+          platform={"league"}
+          icon={LOAIcon}
+          url="https://limitofadhesion.com/"
+        />
+        <Square
+          column={5}
+          row={1}
+          size={4}
+          platform="youtube"
+          url="https://youtube.com/limitofadhesion"
+        />
+        <Square
+          column={1}
+          row={5}
+          size={3}
+          platform="discord"
+          label="Road"
+          url="https://loa.social/discord"
+        />
+        <Square
+          column={4}
+          row={5}
+          size={3}
+          platform="discord"
+          label="Oval"
+          url="https://loa.social/oval-discord"
+        />
+        <Square
+          column={7}
+          row={5}
+          size={1}
+          platform="league"
+          icon={F3Icon}
+          url="http://ir-leaguemanager.com/manager/seasons/82011"
+        />
+        <Square
+          column={8}
+          row={5}
+          size={1}
+          platform="league"
+          icon={GT3Icon}
+          url="http://ir-leaguemanager.com/manager/seasons/80574"
+        />
+      </Grid>
+    </>
+  );
 }
+
+export default App;
