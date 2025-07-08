@@ -21,7 +21,7 @@ export const data: ProfileData  = {
             }
         },
         location: {
-            city: 'Amsterdam',
+            city: 'The Hague',
             country: 'The Netherlands'
         }
     },
