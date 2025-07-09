@@ -1,4 +1,39 @@
-# React + TypeScript + Vite
+# Resume Generator
+
+A React-based resume generator built with TypeScript and Vite. Create your own CV by filling out a JSON file.
+
+## Features
+
+- 📝 Easy-to-edit JSON data structure
+- 🔍 Data validation before deployment
+- 🎨 Modern, responsive design
+- ⚡ Fast build with Vite
+- 📱 Mobile-friendly layout
+
+## Data Validation
+
+The project includes a pre-release validation script that ensures your resume data is valid before deployment. The validation:
+
+- Checks all required fields are present
+- Validates email formats
+- Ensures URLs are properly formatted
+- Verifies date ranges are valid
+- Aborts deployment if any validation errors are found
+
+### Running Validation
+
+```bash
+# Validate data manually
+pnpm run validate
+
+# Test validation with invalid data
+pnpm run test:validate
+
+# Build with validation (automatically runs validation first)
+pnpm run build
+```
+
+## Development
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
