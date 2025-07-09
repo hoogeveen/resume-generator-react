@@ -20,6 +20,15 @@ The project includes a pre-release validation script that ensures your resume da
 - Verifies date ranges are valid
 - Aborts deployment if any validation errors are found
 
+### Platform-Specific Issues
+
+**Important**: Date validation can behave differently across platforms (macOS vs iOS). The validation script uses Zod schema validation which is consistent across all platforms. If you encounter validation failures on one platform but not another, check for:
+
+- Invalid dates (e.g., `2020-11-31` - November only has 30 days)
+- Malformed URLs
+- Invalid email formats
+- Missing required fields
+
 ### Running Validation
 
 ```bash

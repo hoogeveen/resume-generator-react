@@ -54,7 +54,7 @@ export const data: ProfileData  = {
             },
             date: {
                 start: new Date('2018-11-01'),
-                end: new Date('2020-11-31')
+                end: new Date('2020-11-30')
             }
         },
         {
