@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 
 const SectionHeader = styled.h2`
-    color: #329CB9;
+    color: ${({ theme }) => theme.primary};
     font-size: 1.3em;
     margin: 0 0 1em;
 `

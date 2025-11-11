@@ -5,7 +5,7 @@ import type { Project } from '../../types'
 
 const Link = styled.a`
     display: block;
-    color: #0366d6;
+    color: ${({ theme }) => theme.projectLink};
     font-weight: 600;
 `
 
@@ -13,11 +13,11 @@ const Tagline = styled.p`
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
     line-height: 1.5;
     font-size: 12px;
-    color: #586069;
+    color: ${({ theme }) => theme.projectText};
 `
 
 const Container = styled.div`
-    border: 1px solid #e1e4e8;
+    border: 1px solid ${({ theme }) => theme.border};
     padding: 16px;
     border-radius: 6px;
 `

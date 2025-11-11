@@ -13,20 +13,22 @@ import { LanguagesComponent } from './components/Languages'
 import { SkillsComponent } from './components/Skills'
 import { ProjectsComponent } from './components/Projects'
 import { ErrorComponent } from './components/Error'
+import { ThemeProvider, useTheme } from './theme/ThemeContext'
 import { device } from './styles'
+import type { Theme } from './theme/theme'
 
-const globalStyles = css`
+const getGlobalStyles = (theme: Theme) => css`
   body {
     padding: 0;
     margin: 0;
-    background-color: #FFF;
+    background-color: ${theme.background};
     @media ${device.laptop} {
-        background-color: #329CB9;
+        background-color: ${theme.pageBackground};
         padding: 2em;
     }
 
     font-family: "Source Sans Pro", sans-serif;
-    color: #303030;
+    color: ${theme.text};
   }
 
   #root {
@@ -35,14 +37,14 @@ const globalStyles = css`
 
   a {
     text-decoration: none;
-    color: #329CB9;
+    color: ${theme.link};
     &:hover {
         text-decoration: underline;
     }
   }
 
   p, li {
-    color: #858585;
+    color: ${theme.secondaryText};
     line-height: 2;
     @media ${device.laptop} {
         white-space: pre-line;
@@ -65,11 +67,11 @@ const Sidebar = styled.div`
         flex: 30%;
     }
 
-    border-left: 1px solid #EBEBEB;
+    border-left: 1px solid ${({ theme }) => theme.border};
 `
 
 const Footer = styled.div`
-    border-top: 1px solid #EBEBEB;
+    border-top: 1px solid ${({ theme }) => theme.border};
     padding: 2em;
     @media ${device.laptop} {
         padding: 2em 4em 2em;
@@ -87,13 +89,13 @@ const Info = styled.div`
     }
 `
 
-export default function App() {
+const AppContent = () => {
+    const { theme } = useTheme()
     const [validatedData, setValidatedData] = useState<ProfileData | null>(null)
     const [error, setError] = useState<string | null>(null)
 
     useEffect(() => {
         try {
-            // Validate data against schema
             const parsedData = ProfileDataSchema.parse(data)
             setValidatedData(parsedData)
         } catch (validationError) {
@@ -102,11 +104,10 @@ export default function App() {
         }
     }, [])
 
-    // Show error if validation failed
     if (error) {
         return (
             <>
-                <Global styles={globalStyles} />
+                <Global styles={getGlobalStyles(theme)} />
                 <ErrorComponent
                     title="Data Validation Error"
                     message="The resume data failed to validate against the schema. Please check the data structure and try again."
@@ -116,17 +117,17 @@ export default function App() {
         )
     }
 
-    // Show loading state while validating
     if (!validatedData) {
         return (
             <>
-                <Global styles={globalStyles} />
+                <Global styles={getGlobalStyles(theme)} />
                 <div style={{ 
                     display: 'flex', 
                     justifyContent: 'center', 
                     alignItems: 'center', 
                     minHeight: '100vh',
-                    fontFamily: '"Source Sans Pro", sans-serif'
+                    fontFamily: '"Source Sans Pro", sans-serif',
+                    color: theme.text
                 }}>
                     Loading...
                 </div>
@@ -136,7 +137,7 @@ export default function App() {
 
     return (
         <>
-            <Global styles={globalStyles} />
+            <Global styles={getGlobalStyles(theme)} />
             <PageComponent>
                 <Info>
                     <Main>
@@ -156,5 +157,13 @@ export default function App() {
                 </Footer>
             </PageComponent>
         </>
+    )
+}
+
+export default function App() {
+    return (
+        <ThemeProvider>
+            <AppContent />
+        </ThemeProvider>
     )
 }

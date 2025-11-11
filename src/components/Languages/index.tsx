@@ -8,7 +8,7 @@ const Lang = styled.dt`
 `
 
 const Level = styled.dd`
-    color: #858585;
+    color: ${({ theme }) => theme.secondaryText};
     padding: 0;
     margin: 0;
 `

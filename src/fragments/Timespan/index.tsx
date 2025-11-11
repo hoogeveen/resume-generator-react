@@ -3,7 +3,7 @@ import type { Timespan } from '../../types'
 
 const ExperienceDate = styled.p`
     margin: 0;
-    color: #329CB9
+    color: ${({ theme }) => theme.primary};
 `
 
 export const TimespanComponent = ({ timespan }: { timespan: Timespan }) => {

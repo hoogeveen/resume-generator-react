@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import type { ReactNode } from 'react'
 
 const Emphasize = styled.p`
-    color: #329CB9
+    color: ${({ theme }) => theme.primary};
 `
 
 export const EmphasizeComponent = ({ children }: { children: ReactNode }) => {
