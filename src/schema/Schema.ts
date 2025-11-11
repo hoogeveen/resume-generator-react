@@ -13,7 +13,7 @@ const CompanySchema = z.object({
 
 const DateRangeSchema = z.object({
     start: z.date(),
-    end: z.date()
+    end: z.date().optional()
 });
 
 const CurrentSituationSchema = z.object({

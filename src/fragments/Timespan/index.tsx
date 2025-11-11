@@ -7,5 +7,5 @@ const ExperienceDate = styled.p`
 `
 
 export const TimespanComponent = ({ timespan }: { timespan: Timespan }) => {
-    return <ExperienceDate>{timespan.start.toDateString()} - {timespan.end.toDateString()}</ExperienceDate>
+    return <ExperienceDate>{timespan.start.toDateString()} - {timespan.end ? timespan.end.toDateString() : 'Present'}</ExperienceDate>
 }

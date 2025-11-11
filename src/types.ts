@@ -1,6 +1,6 @@
 export interface Timespan {
     start: Date;
-    end: Date;
+    end?: Date;
 }
 
 export interface Location {

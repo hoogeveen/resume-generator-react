@@ -39,6 +39,9 @@ export const data: ProfileData  = {
                     city: 'The Hague',
                     country: 'The Netherlands'
                 }
+            },
+            date: {
+                start: new Date('2020-12-01')
             }
         },
         {
